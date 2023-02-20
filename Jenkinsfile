@@ -12,8 +12,8 @@ node {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     withCredentials([usernamePassword(credentialsId: 'github', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
                         //def encodedPassword = URLEncoder.encode("$GIT_PASSWORD",'UTF-8')
-                        sh "git config user.email onalotech7@gmail.com"
-                        sh "git config user.name georgeonalo"
+                        sh "git config user.email subrahmanyamkv8@gmail.com"
+                        sh "git config user.name kvsubrahmanyam"
                         //sh "git switch main"
                         sh "cat deployment.yaml"
                         sh "sed -i 's+georgenal/test.*+georgenal/test:${DOCKERTAG}+g' deployment.yaml"
